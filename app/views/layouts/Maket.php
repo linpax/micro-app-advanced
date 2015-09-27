@@ -5,8 +5,6 @@ use Micro\web\Html;
 /** @var string $content */
 /** @var \App\components\View $this */
 
-$this->registerScriptFile('/css/jquery.js');
-$this->registerCssFile('/css/main.css');
 ?>
 <?= Html::doctype('html5') ?>
 <html>
