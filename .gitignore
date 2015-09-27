@@ -1,0 +1,4 @@
+/vendor
+/composer.lock
+/webapp/assets/*
+/app/configs/*-local.php
