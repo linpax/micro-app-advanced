@@ -1,6 +1,6 @@
 {
-  "name": "linpax/microphp-app-default",
-  "description": "MicroPHP application template Advenced",
+  "name": "linpax/microphp-app-advanced",
+  "description": "MicroPHP application template Advanced",
   "type": "project",
   "license": "MIT",
   "require": {
