@@ -1,11 +1,10 @@
 <?php
 
-/** @var \Composer\Autoload\ClassLoader $loader */
-$loader = require __DIR__ . '/../vendor/autoload.php';
-$loader->addPsr4('App\\', __DIR__ . '/../app', false); // path for composer
+require __DIR__ . '/../app/_bootstrap.php';
+require __DIR__ . '/../app/Application.php';
 
-$app = new \Micro\Micro(__DIR__ . '/../app', __DIR__ . '/../micro', 'devel', false, false);
+$app = new \App\Application('devel', true);
 
-$app->run(new \Micro\web\Request())->send();
+$app->run(new \Micro\Web\Request)->send();
 
 $app->terminate();

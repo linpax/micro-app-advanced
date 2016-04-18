@@ -1,10 +1,10 @@
 <?php
 
-namespace App\controllers;
+namespace App\Controllers;
 
-use App\components\Controller;
-use App\components\View;
-use Micro\web\Html;
+use App\Components\Controller;
+use App\Components\View;
+use Micro\Web\Html\Html;
 
 class DefaultController extends Controller
 {
@@ -12,7 +12,7 @@ class DefaultController extends Controller
     {
         return [
             [
-                'class' => '\Micro\filter\AccessFilter',
+                'class' => '\Micro\Filter\AccessFilter',
                 'actions' => ['index'],
                 'rules' => [
                     [
@@ -24,11 +24,11 @@ class DefaultController extends Controller
                 ]
             ],
             [
-                'class' => '\Micro\filter\CsrfFilter',
+                'class' => '\Micro\Filter\CsrfFilter',
                 'actions' => ['login']
             ],
             [
-                'class' => '\Micro\filter\XssFilter',
+                'class' => '\Micro\Filter\XssFilter',
                 'actions' => ['index', 'login', 'logout'],
                 'clean' => '*'
             ]
@@ -43,7 +43,7 @@ class DefaultController extends Controller
     public function actionError()
     {
         $result = null;
-        /** @var \Micro\base\Exception $error */
+        /** @var \Micro\Base\Exception $error */
         if ($error = $this->container->request->post('error')) {
             $result .= Html::heading(3, $error->getMessage(), ['class' => 'text-danger bg-danger']);
         }

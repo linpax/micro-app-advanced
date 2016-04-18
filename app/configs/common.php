@@ -9,21 +9,25 @@ return [
     // Site name
     'company' => 'Micro',
     'slogan' => 'simply hmvc php framework',
+
     // Language
     'lang' => 'en',
+
     // Errors
-    'errorController' => '\App\controllers\DefaultController',
+    'errorController' => '\App\Controllers\DefaultController',
     'errorAction' => 'error',
+
     // Parameters
     'params' => $params,
+
     // Components
     'components' => [
         'logger' => [
-            'class' => '\Micro\base\Logger',
+            'class' => '\Micro\Base\Logger',
             'arguments' => [
                 'loggers' => [
                     'file' => [
-                        'class' => '\Micro\loggers\DbLogger',
+                        'class' => '\Micro\Loggers\DbLogger',
                         'levels' => 'notice, error, emergency, critical, alert, warning, info, debug',
                         'table' => 'logs'
                     ]
@@ -31,29 +35,29 @@ return [
             ]
         ],
         'services' => [
-            'class' => '\Micro\base\Services',
+            'class' => '\Micro\Base\Services',
             'arguments' => [
                 'servers' => [
                     'server1' => [
-                        'class' => '\Micro\queues\RawQueue',
+                        'class' => '\Micro\Queues\RawQueue',
                         'ip' => '192.168.10.1',
                         'user' => 'name',
                         'pass' => 'word'
                     ],
                     'server2' => [
-                        'class' => '\Micro\queues\RedisQueue',
+                        'class' => '\Micro\Queues\RedisQueue',
                         'ip' => '192.168.10.2',
                         'user' => 'name',
                         'pass' => 'word'
                     ],
                     'server3' => [
-                        'class' => '\Micro\queues\RedisQueue',
+                        'class' => '\Micro\Queues\RedisQueue',
                         'ip' => '192.168.10.3',
                         'user' => 'name',
                         'pass' => 'word'
                     ],
                     'server4' => [
-                        'class' => '\Micro\queues\RabbitMqQueue',
+                        'class' => '\Micro\Queues\RabbitMqQueue',
                         'ip' => '192.168.10.4',
                         'user' => 'name',
                         'pass' => 'word'

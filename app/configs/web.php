@@ -3,14 +3,14 @@
 return [
     'components' => [
         'router' => [
-            'class' => '\Micro\web\Router',
+            'class' => '\Micro\Web\Router',
             'arguments' => [
                 'routes' => [
                 ]
             ]
         ],
         'auth' => [
-            'class' => '\Micro\auth\DbAcl',
+            'class' => '\Micro\Auth\DbAcl',
             'arguments' => [
                 'container' => '@this',
                 'roles' => [ // Permission roles
@@ -30,26 +30,26 @@ return [
             ]
         ],
         'cookie' => [
-            'class' => '\Micro\web\Cookie',
+            'class' => '\Micro\Web\Cookie',
             'arguments' => [
                 'request' => '@request'
             ]
         ],
         'session' => [
-            'class' => '\Micro\web\Session',
+            'class' => '\Micro\Web\Session',
             'arguments' => [
                 'request' => '@request',
                 'autoStart' => true
             ]
         ],
         'user' => [
-            'class' => '\Micro\web\User',
+            'class' => '\Micro\Web\User',
             'arguments' => [
                 'container' => '@this'
             ]
         ],
         'flash' => [
-            'class' => '\Micro\web\FlashMessage',
+            'class' => '\Micro\Web\FlashMessage',
             'arguments' => [
                 'session' => '@session'
             ]

@@ -1,9 +1,9 @@
 <?php
 
-use Micro\web\Html;
+use Micro\Web\Html\Html;
 
 /** @var string $content */
-/** @var \App\components\View $this */
+/** @var \App\Components\View $this */
 
 ?>
 <?= Html::doctype('html5') ?>
